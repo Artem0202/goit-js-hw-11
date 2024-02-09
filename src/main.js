@@ -53,7 +53,7 @@ function fetchThen(photos) {
       return `
         <li class="gallery-item">
           <a href="${photo.largeImageURL}">
-          <img src=${photo.webformatURL} alt="${photo.tags}">
+          <img src="${photo.webformatURL}" alt="${photo.tags}">
           <ul class="photo-info">
             <li>
                 <h3>Likes</h3>
@@ -80,7 +80,7 @@ function fetchThen(photos) {
 
   setTimeout(() => {
     loaderBox.remove();
-    if (photos.totalHits == 0) {
+    if (photos.totalHits === 0) {
       iziToast.error({
         title: 'Error',
         message:
